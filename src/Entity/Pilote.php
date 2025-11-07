@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\PiloteRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PiloteRepository::class)]
@@ -26,7 +27,7 @@ class Pilote
     private ?\DateTimeInterface $dateDebut = null;
 
     #[ORM\Column(length: 20)]
-    private ?string $statut = 'titulaire'; // titulaire ou réserviste
+    private ?string $statut = 'titulaire';
 
     #[ORM\ManyToOne(inversedBy: 'pilotes')]
     #[ORM\JoinColumn(nullable: false)]

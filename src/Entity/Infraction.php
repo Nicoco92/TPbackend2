@@ -39,6 +39,93 @@ class Infraction
     {
         $this->date = new \DateTime();
     }
+    
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-    // getters & setters à générer (mêmes principes que les autres entités)
+    public function getNomCourse(): ?string
+    {
+        return $this->nomCourse;
+    }
+
+    public function setNomCourse(string $nomCourse): static
+    {
+        $this->nomCourse = $nomCourse;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTime
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTime $date): static
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getPenalitePoints(): ?int
+    {
+        return $this->penalitePoints;
+    }
+
+    public function setPenalitePoints(?int $penalitePoints): static
+    {
+        $this->penalitePoints = $penalitePoints;
+
+        return $this;
+    }
+
+    public function getAmendeEuros(): ?float
+    {
+        return $this->amendeEuros;
+    }
+
+    public function setAmendeEuros(?float $amendeEuros): static
+    {
+        $this->amendeEuros = $amendeEuros;
+
+        return $this;
+    }
+
+    public function getPilote(): ?Pilote
+    {
+        return $this->pilote;
+    }
+
+    public function setPilote(?Pilote $pilote): static
+    {
+        $this->pilote = $pilote;
+
+        return $this;
+    }
+
+    public function getEcurie(): ?Ecurie
+    {
+        return $this->ecurie;
+    }
+
+    public function setEcurie(?Ecurie $ecurie): static
+    {
+        $this->ecurie = $ecurie;
+
+        return $this;
+    }
 }
